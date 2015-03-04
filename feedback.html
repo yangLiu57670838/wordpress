@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+
+<link href="http://www.nanjinglove.com/differentgifts/style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+
+<body>
+
+<div style="display: block; width: 100px; background-color:#d8dcd6; font-weight: bold;text-align: center;"><a href="http://www.nanjinglove.com/differentgifts" name="ttop">Home Page</a></div>
+ <div class="logo" id = "logo"><a href="http://www.nanjinglove.com/differentgifts" name="top"><img src="http://www.nanjinglove.com/differentgifts/logo.png" width="100" height="50" /></a></div>
+
+ <div style="position: relative; float: left; display:block; width: 600px;">
+<?php
+
+require "../differentgifts/includes/defs.php";
+
+$feedback = getFeedback();
+
+foreach ($feedback as $fd) {
+  echo "<strong>{$fd[2]}</strong> said: <strong>{$fd[1]}</strong>, at <em>{$fd[3]}</em>.
+";
+}
+?>
+</div>
+
+
+<div id="contact">
+	<form action="http://www.nanjinglove.com/differentgifts/feedbackAction.php" method="post" onSubmit="return ValidateContactForm()">
+		<fieldset>
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name" placeholder="Enter your name" />
+			
+
+			
+			<label for="comment">Comments:</label>
+			<textarea cols="50" name="comment" rows="15" id="comment" placeholder="Leave your message here"></textarea>
+			
+			<input type="submit" value="Send comments" />
+			
+		</fieldset>
+	</form>
+</div>
+
+
+
+
+<div style="width:400px; height: 150px; text-align:center; border: solid 0px #C0C0C0; background: #FFFFFF; padding: 0px;
+  color: #000000; font-size: 12px"><CENTER><strong></strong></CENTER>
+ <!-- Change marquee direction height and speed below Change image link and image with yours below -->
+    <marquee onmouseover='this.stop();' onmouseout='this.start();' direction="right" height="100"  scrollamount="2" >
+<table>
+<tr>
+<td>
+<div id="picture scroll"><img src="http://www.nanjinglove.com/differentgifts/1.jpg" width="80" height="70" alt="Scrolling Images" border="1"/></a></div></td>
+<td>
+<div id="picture scroll"><img src="http://www.nanjinglove.com/differentgifts/2.jpg" width="80" height="70" alt="Scrolling Images" border="1"/></a></div></td>
+<td>
+<div id="picture scroll"><img src="http://www.nanjinglove.com/differentgifts/3.jpg" width="80" height="70" alt="Scrolling Images" border="1"/></a></div></td>
+</tr>
+</table>
+</marquee></div>
+
+<br>
+<div style="display: block; float: left; position: absolute; bottom: -1000px;">
+<a href="http://www.nanjinglove.com/drupal" name="ttop">Drupal (Blank Page)</a><br>
+<a href="http://www.nanjinglove.com/Joomla" name="ttop">Joomla (Blank Page)</a>
+</div>
+
+</body>
+</html>
